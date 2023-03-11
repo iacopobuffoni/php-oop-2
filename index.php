@@ -15,43 +15,47 @@ $categoriaGatti = new Categoria(
 );
 
 $prodotti = [];
-$prodotti[] = new Prodotto(
-    'Prodotto 1',
-    'Descrizione prodotto 1',
-    9.99,
-    'img',
-    5,
-    $categoriaCani
-);
-
-$prodotti[] = new Prodotto(
-    'Prodotto 2',
-    'Descrizione prodotto 2',
-    9.99,
-    'img',
-    5,
-    $categoriaGatti
-);
-
-$prodotti[] = new Cibo(
-    'Cibo 1',
-    'Descrizione prodotto 2',
-    20.99,
-    'img',
-    5,
-    $categoriaCani,
-    '07/03/2023'
-);
-
-$prodotti[] = new Gioco(
-    'Gioco 1',
-    'Descrizione prodotto 2',
-    12.99,
-    'img',
-    5,
-    $categoriaGatti,
-    'Gomma'
-);
+try {
+    $prodotti[] = new Prodotto(
+        'Prodotto 1',
+        'Descrizione prodotto 1',
+        9.99,
+        'img',
+        5,
+        $categoriaCani
+    );
+    
+    $prodotti[] = new Prodotto(
+        'Prodotto 2',
+        'Descrizione prodotto 2',
+        9.99,
+        'img',
+        5,
+        $categoriaGatti
+    );
+    
+    $prodotti[] = new Cibo(
+        'Cibo 1',
+        'Descrizione prodotto 2',
+        20.99,
+        'img',
+        5,
+        $categoriaCani,
+        '07/03/2023'
+    );
+    
+    $prodotti[] = new Gioco(
+        'Gioco 1',
+        'Descrizione prodotto 2',
+        12.99,
+        'img',
+        5,
+        $categoriaGatti,
+        'Gomma'
+    );
+} catch (Exception $e) {
+    echo 'Errore: '.$e->getMessage();
+}
 
 ?>
 

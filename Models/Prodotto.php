@@ -1,8 +1,8 @@
 <?php
     require_once __DIR__.'/Categoria.php';
+    require_once __DIR__.'../Traits/NameDesc.php';
     class Prodotto {
-        public $nome;
-        public $descrizione;
+        use NameDesc;
         public $prezzo;
         public $quantita;
         public $immagine;
@@ -16,6 +16,13 @@
             $this->immagine = $immagine;
             $this->quantita = $quantita;
             $this->categoria = $categoria;
+            
+
+            if($prezzo >= 0) {
+                $this->prezzo = $prezzo;
+            } else {
+                throw new Exception('Non é possibile inserire un prezzo negativo');
+            }
 
         }
     }

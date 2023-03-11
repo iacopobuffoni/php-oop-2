@@ -1,7 +1,8 @@
 <?php
-require_once __DIR__ . '/Models/Prodotto.php';
-require_once __DIR__ . '/Models/Categoria.php';
-require_once __DIR__ . '/Models/Cibo.php';
+require_once __DIR__ .'/Models/Prodotto.php';
+require_once __DIR__ .'/Models/Categoria.php';
+require_once __DIR__ .'/Models/Cibo.php';
+require_once __DIR__ .'/Models/Gioco.php';
 
 
 $categoriaCani = new Categoria(
@@ -35,11 +36,21 @@ $prodotti[] = new Prodotto(
 $prodotti[] = new Cibo(
     'Cibo 1',
     'Descrizione prodotto 2',
-    9.99,
+    20.99,
+    'img',
+    5,
+    $categoriaCani,
+    '07/03/2023'
+);
+
+$prodotti[] = new Gioco(
+    'Gioco 1',
+    'Descrizione prodotto 2',
+    12.99,
     'img',
     5,
     $categoriaGatti,
-    '07/03/2023'
+    'Gomma'
 );
 
 ?>
